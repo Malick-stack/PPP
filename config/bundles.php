@@ -12,4 +12,18 @@ return [
     Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle::class => ['all' => true],
     Symfony\Bundle\SecurityBundle\SecurityBundle::class => ['all' => true],
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
+    Kreait\Firebase\Symfony\Bundle\FirebaseBundle::class => ['all' => true],
+];
+
+//Ce package sert a configurer symfony avec firebase
+$bundles = array(
+    // ...
+    new Kreait\Firebase\Symfony\Bundle\FirebaseBundle(),
+);
+
+// Symfony with Flex
+// in config/bundles.php
+return [
+    // ...
+    Kreait\Firebase\Symfony\Bundle\FirebaseBundle::class => ['all' => true],
 ];

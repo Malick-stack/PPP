@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="coder,fullstack dev">
+    <meta name="author" content="MALICK DEV">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>PPPRT2.com</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="https://freesvg.org/img/1319593206.png">
+
+    <style>
+     #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarExample">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    Top
+    </button>
+    <!-- Navigation -->
+    <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+        <div class="container">
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html"><img src="https://freesvg.org/img/1319593206.png" alt="alternative"></a> 
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text" href="index.html">Desi</a> -->
+
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acceuil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/presentation">Présentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallerie">Galerie</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/colonie">Colonie</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/journal2">Journal</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/warre">Warré</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/decouverte">Découverte</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ques/resp">Questions / Réponses</a>
+                    </li>
+
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ppprt.forumactif.com">Forum</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/{{app.user ? 'logout' : 'login'}}">{{app.user ? 'Déconnexion' : 'Connexion'}}</a>
+                    </li>
+                </ul>
+                <span class="nav-item social-icons">
+                    <span class="fa-stack">
+                        <a href="https://www.facebook.com/IUTRoanne/">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://twitter.com/IutRoanne?s=20">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-twitter fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+      
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="h1-large">Au service des abeilles</h1>
+                        <a class="btn-solid-lg" href="#introduction">Découvrir</a>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+        
+        <!-- Video Background -->
+        <video autoplay loop muted id="video-background" poster="images/header-background.jpg" playsinline>
+            <source src="https://bit.ly/3IgX4Im" type="video/mp4" />
+        </video>
+        <!-- end of video background -->
+
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <!-- Services 1 -->
+    <div id="services" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="https://static.cotemaison.fr/medias_11951/w_1365,h_1024,c_crop,x_0,y_696/w_1080,h_600,c_fill,g_north/v1595837675/comment-proteger-les-abeilles_6119052.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>Pourquoi il faut sauver les abeilles ?</h2>
+                        <p>La bonne santé des abeilles est essentielle, car elles sont les sentinelles de l'environnement. </p>
+                        <a class="read-more no-line green" href="#">plus de détails <span class="fas fa-long-arrow-alt-right"></span></a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of services 1 -->
+
+
+    <!-- Services 2 -->
+    <div class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="https://i.notretemps.com/1400x787/smart/2021/06/02/jardinez-pour-les-abeilles.jpeg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>Comment les abeilles fabriquent le miel ?</h2>
+                        <p>En butinant une fleur, l'abeille récolte son nectar qu'elle assèche en le déshumidifiant et qu'elle travaille pour le transformer en miel. Le nectar va transiter par de nombreuses ouvrières, chacune le faisant circuler entre leur “bouche” et leur jabot.</p>
+                        <a class="read-more no-line green" href="article.html">Plus de détails <span class="fas fa-long-arrow-alt-right"></span></a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of services 2 -->
+
+    <!-- Services 1 -->
+    <div id="services" class="basic-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="https://static.cotemaison.fr/medias_11951/w_1365,h_1024,c_crop,x_0,y_696/w_1080,h_600,c_fill,g_north/v1595837675/comment-proteger-les-abeilles_6119052.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>Pourquoi les abeilles sont indispensables ?</h2>
+                        <p>Elles ont permis l'évolution des plantes à fleurs et en ont garanti la survie.</p>
+                        <p><strong>Car les insectes, et principalement les abeilles, contribuent à la pollinisation de 80% des espèces de plantes à fleurs et des plantes cultivées</p>
+                            <a class="read-more no-line green" href="#">plus de détails <span class="fas fa-long-arrow-alt-right"></span></a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of services 1 -->
+
+    
+
+    <!-- Testimonials -->
+    <div class="slider-1">
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+                                
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <img class="testimonial-image" src="https://bit.ly/3i7u0Zg" alt="alternative">
+                                    <p class="testimonial-text">"La douceur du miel ne console pas de la piqûre de l’abeille"</p>
+                                    <div class="testimonial-author">MBENGUE EL HADJI MALICK</div>
+                                    <div class="testimonial-position">Etudiant en RT2 Réseaux et Télécoms</div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+        
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <img class="testimonial-image" src="https://firebasestorage.googleapis.com/v0/b/ppprt2-3040c.appspot.com/o/Malick%2Ffatou.png?alt=media&token=2adb8c63-55ae-4dc4-9734-7b42d0d04492" alt="alternative">
+                                    <p class="testimonial-text">“La diligente abeille n’a pas de temps pour la tristesse”</p>
+                                    <div class="testimonial-author">FATOU THIAW</div>
+                                    <div class="testimonial-position">Etudiante en RT2 Réseaux et Télécoms</div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+        
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <img class="testimonial-image" src="https://firebasestorage.googleapis.com/v0/b/ppprt2-3040c.appspot.com/o/Malick%2FIMG-20220315-WA0003.jpg?alt=media&token=3fea5139-b1da-4fcf-ad52-5257b473c445" alt="alternative">
+                                    <p class="testimonial-text">“Ce qui n'est point utile à l'essaim, n'est point utile à l'abeille.”</p>
+                                    <div class="testimonial-author">MARIAMA TOURE</div>
+                                    <div class="testimonial-position">Etudiante en RT2 Réseaux et Télécoms</div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <img class="testimonial-image" src="https://firebasestorage.googleapis.com/v0/b/ppprt2-3040c.appspot.com/o/Malick%2FIMG-20220315-WA0004.jpg?alt=media&token=8edfeeb2-151c-49b0-9907-f43779523f44" alt="alternative">
+                                    <p class="testimonial-text">“Une poignée d'abeilles vaut mieux qu'un sac de mouches”</p>
+                                    <div class="testimonial-author">DABA MBAYE</div>
+                                    <div class="testimonial-position">Etudiante en RT2 Réseaux et Télécoms</div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+        
+                            </div> <!-- end of swiper-wrapper -->
+        
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- end of add arrows -->
+        
+                        </div> <!-- end of swiper-container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of card slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-1 -->
+    <!-- end of testimonials -->
+
+
+    
+
+
+    <!-- Contact -->
+    <div id="contact" class="form-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">Contactez-nous</h2>
+                    <ul class="list-unstyled li-space-lg">
+                        <li><i class="fas fa-map-marker-alt"></i> &nbsp;20 Av. de Paris, 42300 Roanne</li>
+                        <li><i class="fas fa-phone"></i> &nbsp;<a href="tel:00817202212">04 77 44 89 00</a></li>
+                        <li><i class="fas fa-envelope"></i> &nbsp;<a href="mailto:contact@site.com">ppprt2@roannert.com</a></li>
+                    </ul>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    
+                    <!-- Contact Form -->
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" placeholder="Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control-textarea" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">Envoyé</button>
+                        </div>
+                    </form>
+                    <!-- end of contact form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-1 -->
+    <!-- end of contact -->
+
+
+   
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a href="#your-link">ppprt2</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+
+    <!-- Back To Top Button -->
+    <button onclick="topFunction()" id="myBtn">
+        <img src="images/up-arrow.png" alt="alternative">
+    </button>
+    <!-- end of back to top button -->
+    	
+    <!-- Scripts -->
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
